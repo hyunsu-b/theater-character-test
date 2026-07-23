@@ -63,7 +63,7 @@ function renderResult(){
  const counts={A:0,B:0,C:0,D:0};answers.forEach(x=>counts[x]++);
  const max=Math.max(...Object.values(counts)), winners=Object.keys(counts).filter(k=>counts[k]===max);
  const key=winners[Math.floor(Math.random()*winners.length)], c=config.characters[key];
- document.getElementById("app").innerHTML=`<div class="card result"><div class="symbol">${esc(c.symbol)}</div><span class="tag">${esc(c.tag)}</span><h2>당신은 ${esc(c.name)}와 가장 닮았습니다.</h2><p>${esc(c.desc)}</p><hr><p class="small">${esc(config.eventText)}</p><a href="https://docs.google.com/forms/d/10EMbC8pvu4yNDzDl5iM8_0QooHcN30LSL4/viewform" target="_blank" rel="noopener noreferrer"><button class="primary">${esc(config.eventTitle)}</button></a><span class="adminlink" onclick="renderIntro()">처음으로 돌아가기</span></div>`;
+ document.getElementById("app").innerHTML=`<div class="card result"><div class="symbol">${esc(c.symbol)}</div><span class="tag">${esc(c.tag)}</span><h2>당신은 ${esc(c.name)}와 가장 닮았습니다.</h2><p>${esc(c.desc)}</p><hr><p class="small">${esc(config.eventText)}</p><a href="https://docs.google.com/forms/d/e/1FAIpQLScJmevX3_RNhCyn174VcuRqSL0UwGQ3Ht3Oagtv55ijJFevuQ/viewform" target="_blank" rel="noopener noreferrer"><button class="primary">${esc(config.eventTitle)}</button></a><span class="adminlink" onclick="renderIntro()">처음으로 돌아가기</span></div>`;
 }
 function admin(){
  document.getElementById("app").innerHTML=`<div class="card"><h2>관리자 설정</h2><p class="small">아래 내용을 수정한 뒤 저장하면 이 브라우저에서 바로 반영됩니다. 질문·선택지의 연결 인물은 A/B/C/D로 입력하세요.</p>
